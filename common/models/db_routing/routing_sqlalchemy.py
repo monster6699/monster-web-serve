@@ -14,6 +14,11 @@ class RoutingSQLAlchemy(SQLAlchemy):
     default_bind = ''
 
     def create_session(self, options):
+        """
+        改写父类里的session创建方法，需要创建可以按照我们要求的能读写分离的session数据库工具
+        :param options:
+        :return:
+        """
         return orm.sessionmaker(class_=RoutingSession, db=self, **options)
 
     def get_binds(self, app=None):
