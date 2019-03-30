@@ -12,7 +12,7 @@ from utils import parser
 from models import db
 from models.user import User, UserProfile
 from utils.jwt_util import generate_jwt
-# from cache import user as cache_user
+from cache import user as cache_user
 from utils.limiter import limiter as lmt
 from utils.decorators import set_db_to_read, set_db_to_write
 
@@ -48,28 +48,21 @@ class AuthorizationResource(Resource):
         'put': [set_db_to_read]
     }
 
-    def _generate_tokens(self, user_id):
+    def _generate_tokens(self, user_id, with_refresh_token=True):
         """
         生成token 和refresh_token
         :param user_id: 用户id
         :return: token, refresh_token
         """
         # 颁发JWT
-        #
-        # user_id  -> payload
-        # 有效期 -> payload
-        #
-        # user_name  X 有可能会变，如果保存，在修改的情况下，token也就变了
-        # photo  X
-
-        payload = {'user_id': user_id, 'refresh': False}
-        expiry = datetime.now() + timedelta(hours=current_app.config['JWT_EXPIRY_HOURS'])
-        token = generate_jwt(payload, expiry)
-
-        payload = {'user_id': user_id, 'refresh': True}
-        expiry = datetime.now() + timedelta(days=current_app.config['JWT_REFRESH_DAYS'])
-        refresh_token = generate_jwt(payload, expiry)
-
+        now = datetime.utcnow()
+        expiry = now + timedelta(hours=current_app.config['JWT_EXPIRY_HOURS'])
+        # expiry = now + timedelta(minutes=current_app.config['JWT_EXPIRY_HOURS'])
+        token = generate_jwt({'user_id': user_id, 'refresh': False}, expiry)
+        refresh_token = None
+        if with_refresh_token:
+            refresh_expiry = now + timedelta(days=current_app.config['JWT_REFRESH_DAYS'])
+            refresh_token = generate_jwt({'user_id': user_id, 'refresh': True}, refresh_expiry)
         return token, refresh_token
 
     def post(self):
@@ -112,12 +105,35 @@ class AuthorizationResource(Resource):
             db.session.commit()
         else:
             if user.status == User.STATUS.DISABLE:
+                cache_user.UserStatusCache(user.id).save(user.status)
                 return {'message': 'Invalid user.'}, 403
 
         token, refresh_token = self._generate_tokens(user.id)
 
+        # 缓存用户信息
+        cache_user.UserProfileCache(user.id).save()
+        cache_user.UserStatusCache(user.id).save(User.STATUS.ENABLE)
         return {'token': token, 'refresh_token': refresh_token}, 201
 
+    def put(self):
+        """
+        刷新token
+        """
+        user_id = g.user_id
+        if user_id and g.is_refresh_token:
+
+            # 判断用户状态
+            user_enable = cache_user.UserStatusCache(g.user_id).get()
+            if not user_enable:
+                return {'message': 'User denied.'}, 403
+
+            token, refresh_token = self._generate_tokens(user_id, with_refresh_token=False)
+
+            return {'token': token}, 201
+
+        else:
+
+            return {'message': 'Wrong refresh token.'}, 403
 
 
 
