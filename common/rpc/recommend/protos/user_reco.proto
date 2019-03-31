@@ -39,6 +39,15 @@ message Similar {
 
 service UserRecommend {
     // feed recommend
-    rpc user_recommend(User) returns (Track) {}
+    rpc user_recommend (User) returns (Track) {}
+//    }
+//    Track -> {
+//    exposure,
+//    recommends = [{article_id1, {click->'user1:art:19:click', collect, share, read}},{article_id2,{}},{article_id3, {}},{}],
+//    time_stamp,
+//}  埋点
+
     rpc article_recommend(Article) returns(Similar) {}
 }
+
+
