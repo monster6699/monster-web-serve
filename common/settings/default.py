@@ -64,7 +64,7 @@ class DefaultConfig(object):
     QINIU_BUCKET_NAME = ''
     QINIU_DOMAIN = 'http://toutiao.meiduo.site/'
 
-    RABBITMQ = 'amqp://python:rabbitmq@localhost:5672/toutiao'
+    RABBITMQ = 'amqp://python:rabbitmqpwd@localhost:5672/toutiao'
 
     GEETEST_ID = ''
     GEETEST_KEY = ''
