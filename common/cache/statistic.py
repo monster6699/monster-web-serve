@@ -3,7 +3,7 @@ from sqlalchemy import func
 
 from redis.exceptions import RedisError, ConnectionError
 from models.news import Article, Collection, Attitude, CommentLiking, Comment
-from models.user import Relation
+from models.toutiao_user import Relation
 from models import db
 
 

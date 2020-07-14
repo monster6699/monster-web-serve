@@ -6,7 +6,7 @@ import json
 from redis.exceptions import RedisError, ConnectionError
 from sqlalchemy.exc import SQLAlchemyError
 
-from models.user import User, Relation, UserProfile
+from models.toutiao_user import User, Relation, UserProfile
 from models.news import Article, Collection
 from models import db
 from . import constants

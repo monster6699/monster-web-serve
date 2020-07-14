@@ -6,7 +6,7 @@ from sqlalchemy.exc import IntegrityError
 
 from utils.decorators import login_required
 from cache import user as cache_user
-from models.user import User, UserProfile
+from models.toutiao_user import User, UserProfile
 from utils import parser
 from models import db
 from utils.storage import upload_image

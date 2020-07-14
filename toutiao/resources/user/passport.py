@@ -10,7 +10,7 @@ from celery_tasks.sms.tasks import send_verification_code
 from . import constants
 from utils import parser
 from models import db
-from models.user import User, UserProfile
+from models.toutiao_user import User, UserProfile
 from utils.jwt_util import generate_jwt
 from cache import user as cache_user
 from utils.limiter import limiter as lmt

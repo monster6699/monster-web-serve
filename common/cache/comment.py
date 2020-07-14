@@ -7,7 +7,7 @@ from redis.exceptions import RedisError
 import json
 
 from models import db
-from models.user import User
+from models.toutiao_user import User
 from models.news import Comment
 from cache import user as cache_user
 from . import constants

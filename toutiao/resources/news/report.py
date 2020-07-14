@@ -15,7 +15,8 @@ class ReportListResource(Resource):
     """
     method_decorators = [login_required]
 
-    def _report_type(self, value):
+    @staticmethod
+    def _report_type(value):
         if value not in Report.TYPE_LIST:
             raise ValueError('Invalid report type.')
         else:
@@ -41,7 +42,3 @@ class ReportListResource(Resource):
             return {'message': 'User has reported this article.'}, 409
 
         return {'target': args.target, 'type': args.type}, 201
-
-
-
-

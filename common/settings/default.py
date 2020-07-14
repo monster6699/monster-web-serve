@@ -6,15 +6,15 @@ class DefaultConfig(object):
     
     # 日志
     LOGGING_LEVEL = 'DEBUG'
-    LOGGING_FILE_DIR = '/home/python/logs'
+    LOGGING_FILE_DIR = 'C:/Users/Monster/Desktop/数据信息/front/monster-web-serve/logs'
     LOGGING_FILE_MAX_BYTES = 300 * 1024 * 1024
     LOGGING_FILE_BACKUP = 10
 
     # flask-sqlalchemy使用的参数
     # SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1/toutiao'  # 数据库
     SQLALCHEMY_BINDS = {
-        'bj-m1': 'mysql://root:mysql@127.0.0.1:3306/toutiao',
-        'bj-s1': 'mysql://root:mysql@127.0.0.1:8306/toutiao',
+        'bj-m1': 'mysql://root:1241340047chen@39.106.78.168:3306/monster',
+        'bj-s1': 'mysql://root:1241340047chen@39.106.78.168:3306/monster',
         'masters': ['bj-m1'],
         'slaves': ['bj-s1'],
         'default': 'bj-m1'

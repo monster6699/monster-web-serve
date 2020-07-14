@@ -81,7 +81,6 @@ class User(db.Model):
     account = db.Column(db.String, doc='账号')
     email = db.Column(db.String, doc='邮箱')
     status = db.Column(db.Integer, default=1, doc='状态，是否可用')
-
     # 两种方法都可以
     # followings = db.relationship('Relation', primaryjoin='User.id==Relation.user_id')
     followings = db.relationship('Relation', foreign_keys='Relation.user_id')

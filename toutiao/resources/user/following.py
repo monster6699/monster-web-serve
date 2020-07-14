@@ -6,7 +6,7 @@ from flask_restful import inputs
 import time
 
 from utils.decorators import login_required, set_db_to_read, set_db_to_write
-from models.user import Relation, User
+from models.toutiao_user import Relation, User
 from utils import parser
 from models import db
 from cache import user as cache_user

@@ -8,7 +8,7 @@ from redis.exceptions import RedisError, ConnectionError
 from sqlalchemy.exc import SQLAlchemyError
 
 from models.news import Article, ArticleStatistic, Attitude
-from models.user import User
+from models.toutiao_user import User
 from models import db
 from cache import user as cache_user
 from . import constants
