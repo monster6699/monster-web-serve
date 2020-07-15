@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import *
 from redis.exceptions import RedisError
 from sqlalchemy.exc import SQLAlchemyError
 import grpc
@@ -14,6 +15,7 @@ def create_flask_app(config, enable_config_file=False):
     :return: Flask应用
     """
     app = Flask(__name__)
+    CORS(app, supports_credentials=True)
     app.config.from_object(config)
     if enable_config_file:
         from utils import constants
@@ -57,7 +59,7 @@ def create_app(config, enable_config_file=False):
     # _sentinel = Sentinel(app.config['REDIS_SENTINELS'])
     # app.redis_master = _sentinel.master_for(app.config['REDIS_SENTINEL_SERVICE_NAME'])
     # app.redis_slave = _sentinel.slave_for(app.config['REDIS_SENTINEL_SERVICE_NAME'])
-
+    #
     # from rediscluster import StrictRedisCluster
     # app.redis_cluster = StrictRedisCluster(startup_nodes=app.config['REDIS_CLUSTER'])
 

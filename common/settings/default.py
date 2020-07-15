@@ -13,8 +13,8 @@ class DefaultConfig(object):
     # flask-sqlalchemy使用的参数
     # SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1/toutiao'  # 数据库
     SQLALCHEMY_BINDS = {
-        'bj-m1': 'mysql://root:1241340047chen@39.106.78.168:3306/monster',
-        'bj-s1': 'mysql://root:1241340047chen@39.106.78.168:3306/monster',
+        'bj-m1': 'mysql+pymysql://root:1241340047chen@39.106.78.168:3306/monster',
+        'bj-s1': 'mysql+pymysql://root:1241340047chen@39.106.78.168:3306/monster',
         'masters': ['bj-m1'],
         'slaves': ['bj-s1'],
         'default': 'bj-m1'

@@ -13,7 +13,7 @@ user_api.representation('application/json')(output_json)
 user_api.add_resource(passport.SMSVerificationCodeResource, '/v1_0/sms/codes/<mobile:mobile>',
                       endpoint='SMSVerificationCode')
 
-user_api.add_resource(passport.AuthorizationResource, '/v1_0/authorizations',
+user_api.add_resource(passport.AuthorizationResource, '/security/oauth/token',
                       endpoint='Authorization')
 
 user_api.add_resource(following.FollowingListResource, '/v1_0/user/followings',

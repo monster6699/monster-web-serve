@@ -10,6 +10,7 @@ from celery_tasks.sms.tasks import send_verification_code
 from . import constants
 from utils import parser
 from models import db
+from models.administor import Administrator
 from models.toutiao_user import User, UserProfile
 from utils.jwt_util import generate_jwt
 from cache import user as cache_user
@@ -69,50 +70,39 @@ class AuthorizationResource(Resource):
         登录创建token
         """
         json_parser = RequestParser()
-        json_parser.add_argument('mobile', type=parser.mobile, required=True, location='json')
-        json_parser.add_argument('code', type=parser.regex(r'^\d{6}$'), required=True, location='json')
+        json_parser.add_argument('username', type=str, required=True, location='form')
+        json_parser.add_argument('password', type=str, required=True, location='form')
         args = json_parser.parse_args()
-        mobile = args.mobile
-        code = args.code
+        username = args.username
+        password = args.password
 
-        # 从redis中获取验证码
-        key = 'app:code:{}'.format(mobile)
-        try:
-            real_code = current_app.redis_master.get(key)
-        except ConnectionError as e:
-            current_app.logger.error(e)
-            real_code = current_app.redis_slave.get(key)
+        # # 查询或保存用户
+        user = Administrator.query.filter_by(username=username).first()
 
-        try:
-            current_app.redis_master.delete(key)
-        except ConnectionError as e:
-            current_app.logger.error(e)
-
-        if not real_code or real_code.decode() != code:
-            return {'message': 'Invalid code.'}, 400
-
-        # 查询或保存用户
-        user = User.query.filter_by(mobile=mobile).first()
-
-        if user is None:
-            # 用户不存在，注册用户
-            user_id = current_app.id_worker.get_id()
-            user = User(id=user_id, mobile=mobile, name=mobile, last_login=datetime.now())
-            db.session.add(user)
-            profile = UserProfile(id=user.id)
-            db.session.add(profile)
-            db.session.commit()
-        else:
-            if user.status == User.STATUS.DISABLE:
-                cache_user.UserStatusCache(user.id).save(user.status)
-                return {'message': 'Invalid user.'}, 403
-
+        if user.check_password(password) is False:
+            return {"message": "error"}, 500
         token, refresh_token = self._generate_tokens(user.id)
 
-        # 缓存用户信息
-        cache_user.UserProfileCache(user.id).save()
-        cache_user.UserStatusCache(user.id).save(User.STATUS.ENABLE)
-        return {'token': token, 'refresh_token': refresh_token}, 201
+        #
+        # if user is None:
+        #     # 用户不存在，注册用户
+        #     user_id = current_app.id_worker.get_id()
+        #     user = User(id=user_id, mobile=mobile, name=mobile, last_login=datetime.now())
+        #     db.session.add(user)
+        #     profile = UserProfile(id=user.id)
+        #     db.session.add(profile)
+        #     db.session.commit()
+        # else:
+        #     if user.status == User.STATUS.DISABLE:
+        #         cache_user.UserStatusCache(user.id).save(user.status)
+        #         return {'message': 'Invalid user.'}, 403
+        #
+        # token, refresh_token = self._generate_tokens(user.id)
+        #
+        # # 缓存用户信息
+        # cache_user.UserProfileCache(user.id).save()
+        # cache_user.UserStatusCache(user.id).save(User.STATUS.ENABLE)
+        return {"token": token, "refresh_token": refresh_token}, 200
 
     def put(self):
         """
@@ -133,13 +123,3 @@ class AuthorizationResource(Resource):
         else:
 
             return {'message': 'Wrong refresh token.'}, 403
-
-
-
-
-
-
-
-
-
-

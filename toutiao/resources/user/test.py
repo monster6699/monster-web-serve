@@ -13,6 +13,7 @@ from utils.storage import upload_image
 from utils.decorators import set_db_to_write, set_db_to_read
 from models.administor import Administrator, AdministratorMenu
 
+
 class UserResource(Resource):
     """
     用户数据资源
@@ -27,7 +28,6 @@ class UserResource(Resource):
         获取target用户的数据
         :param target: 目标用户id
         """
-        data = AdministratorMenu(id=2)
-
-        print(data)
+        data = Administrator.query.get(1)
+        print(data.name)
         return "ok"
