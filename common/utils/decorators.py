@@ -42,7 +42,8 @@ def login_required(func):
             return {'message': 'Do not use refresh token.'}, 403
         else:
             # 判断用户状态
-            user_enable = cache_user.UserStatusCache(g.user_id).get()
+            # user_enable = cache_user.UserStatusCache(g.user_id).get()
+            user_enable = g.user_id
             if not user_enable:
                 return {'message': 'User denied.'}, 403
 

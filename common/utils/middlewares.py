@@ -12,7 +12,7 @@ def jwt_authentication():
     g.anonymous_id = None
     g.is_verified = False
     authorization = request.headers.get('Authorization')
-    if authorization and authorization.startswith('Bearer '):
+    if authorization and authorization.startswith('bearer '):
         g.use_token = True
         token = authorization.strip()[7:]
         payload = verify_jwt(token)

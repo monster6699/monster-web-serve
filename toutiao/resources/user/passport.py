@@ -48,7 +48,8 @@ class AuthorizationResource(Resource):
         'post': [set_db_to_write],
     }
 
-    def _generate_tokens(self, user_id, with_refresh_token=True):
+    @staticmethod
+    def _generate_tokens(user_id, with_refresh_token=True):
         """
         生成token 和refresh_token
         :param user_id: 用户id
@@ -82,27 +83,7 @@ class AuthorizationResource(Resource):
         if user.check_password(password) is False:
             return {"message": "error"}, 500
         token, refresh_token = self._generate_tokens(user.id)
-
-        #
-        # if user is None:
-        #     # 用户不存在，注册用户
-        #     user_id = current_app.id_worker.get_id()
-        #     user = User(id=user_id, mobile=mobile, name=mobile, last_login=datetime.now())
-        #     db.session.add(user)
-        #     profile = UserProfile(id=user.id)
-        #     db.session.add(profile)
-        #     db.session.commit()
-        # else:
-        #     if user.status == User.STATUS.DISABLE:
-        #         cache_user.UserStatusCache(user.id).save(user.status)
-        #         return {'message': 'Invalid user.'}, 403
-        #
-        # token, refresh_token = self._generate_tokens(user.id)
-        #
-        # # 缓存用户信息
-        # cache_user.UserProfileCache(user.id).save()
-        # cache_user.UserStatusCache(user.id).save(User.STATUS.ENABLE)
-        return {"token": token, "refresh_token": refresh_token}, 200
+        return {"access_token": token, "refresh_token": refresh_token}, 200
 
     def put(self):
         """

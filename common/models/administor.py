@@ -97,7 +97,6 @@ class AdministratorMenu(db.Model):
         return menu_dict
 
 
-
 class AdministratorRoleMenu(db.Model):
     """
     角色菜单中间表
@@ -129,7 +128,7 @@ class AdministratorUserRole(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('admin_user.id'), doc='管理员ID')
     user = db.relationship("Administrator", uselist=False)
     role_id = db.Column(db.Integer, db.ForeignKey('admin_role.id'), doc='管理员ID')
-    role = db.relationship("AdministratorRole", uselist=True)
+    role = db.relationship("AdministratorRole", uselist=False)
     status = db.Column(db.Integer, default=1, doc='状态')
     ctime = db.Column('create_time', db.DateTime, default=datetime.now, doc='创建时间')
     utime = db.Column('update_time', db.DateTime, default=datetime.now, onupdate=datetime.now, doc='更新时间')
