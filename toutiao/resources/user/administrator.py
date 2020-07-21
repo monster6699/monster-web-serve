@@ -30,7 +30,8 @@ class CurrentUserResource(Resource):
         user_info = user_data.user
         result = {
             "id": user_info.id,
-            "name": user_info.username,
+            "username": user_info.username,
+            "name": user_info.name,
             "mobile": user_info.mobile,
             "email": user_info.email,
             "roles": [user_data.role.name]
@@ -51,23 +52,46 @@ class CurrentUserMenu(Resource):
         role_id = AdministratorUserRole.query.filter_by(user_id=g.user_id).first()
         user_menu = AdministratorRoleMenu.query.filter(role_id == role_id).all()
         menu_list = []
-        for menu_id in user_menu:
-            menu_list.append(menu_id.id)
-        role_menu = AdministratorMenu.query.filter(AdministratorMenu.id.in_(menu_list)).all()
-        self.hanleFormateTree(role_menu)
-        return "ok"
-
-    def hanleFormateTree(self, menu_obj):
+        for menu in user_menu:
+            menu_list.append(menu.menu_id)
+        role_menu = AdministratorMenu.query.filter(AdministratorMenu.id.in_(menu_list), ).all()
         resualt = []
-        for menu in menu_obj:
+        for menu in role_menu:
             menu_dict = {
                 "id": menu.id,
                 "name": menu.name,
                 "path": menu.path,
+                "parent_id": menu.parent_id,
                 "meta": json.loads(menu.meta),
-                "children":
+                "fullPath": menu.full_path,
+                "redirect": menu.redirect,
+                "hidden": menu.hidden
             }
-            if menu.parent_id == 0:
-                pass
-        pass
+            resualt.append(menu_dict)
+        parent_list = self._find_parent_node(resualt)
+        res = self.fomate_menu(resualt, parent_list)
+        return res
 
+    def fomate_menu(self, resualt, parent_list):
+        if len(parent_list) == 0:
+            return []
+        for parent in parent_list:
+            parent['children'] = self._find_children_node(resualt, parent['id'])
+            self.fomate_menu(resualt, parent['children'])
+        return parent_list
+
+    @staticmethod
+    def _find_parent_node(node_list, parent_id=0):
+        parent_list = []
+        for node in node_list:
+            if node['parent_id'] == parent_id:
+                parent_list.append(node)
+        return parent_list
+
+    @staticmethod
+    def _find_children_node(node_list, parent_id):
+        children_list = []
+        for node in node_list:
+            if node['parent_id'] == parent_id:
+                children_list.append(node)
+        return children_list

@@ -4,6 +4,7 @@ from models import db
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 
+
 class Administrator(db.Model):
     """
     管理员基本信息
@@ -76,25 +77,11 @@ class AdministratorMenu(db.Model):
     status = db.Column(db.Integer, default=1, doc='状态')
     parent_id = db.Column(db.Integer, db.ForeignKey('admin_menu.id'), doc='父节点')
     parent = db.relationship('AdministratorMenu', uselist=False)
+    hidden = db.Column(db.Integer, default=0, doc='是否隐藏')
+    full_path = db.Column(db.String, doc='全路径')
+    redirect = db.Column(db.String, doc='跳转路径')
     ctime = db.Column('create_time', db.DateTime, default=datetime.now, doc='创建时间')
     utime = db.Column('update_time', db.DateTime, default=datetime.now, onupdate=datetime.now, doc='更新时间')
-
-    def to_dict(self):
-        menu_dict = {
-            "id": self.id,
-            "name": self.name,
-            "path": self.path,
-            "meta": self.meta,
-            "menu_order": self.menu_order,
-            "remark": self.remark,
-            "status": self.status,
-            "parent_id": self.parent_id,
-            "parent": self.parent.to_dict(),
-            "ctime": self.ctime,
-            "utime": self.utime
-
-        }
-        return menu_dict
 
 
 class AdministratorRoleMenu(db.Model):

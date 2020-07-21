@@ -12,7 +12,7 @@ def output_json(data, code, headers=None):
 
     if 'message' not in data:
         data = {
-            'message': 'OK',
+            'msg': 'success',
             'data': data,
             'code': code
 
