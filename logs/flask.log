@@ -325,3 +325,63 @@ Cookie: sidebarStatus=0; JSESSIONID=1C939B2C1186A820C289AE46B5408356; vue_typesc
 WARNING in output 10: b''
 [2020-07-15 18:45:23,556] 127.0.0.1 requested http://localhost:5000/security/oauth/token
 WARNING in output 11: {'message': {'username': 'Missing required parameter in the JSON body'}}
+[2020-07-24 15:43:21,338] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=8ECBD1870AB6A322A80104D9680C1DBD; vue_typescript_admin_access_token=5f1a335e1ae7fd572fb51211; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+
+
+[2020-07-24 15:43:21,349] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 10: b''
+[2020-07-24 15:43:21,349] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 11: {'message': {'page': "'Flask' object has no attribute 'redis_cluster'"}}
+[2020-07-24 15:43:44,495] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=8ECBD1870AB6A322A80104D9680C1DBD; vue_typescript_admin_access_token=5f1a335e1ae7fd572fb51211; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+
+
+[2020-07-24 15:43:44,495] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 10: b''
+[2020-07-24 15:43:44,495] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 11: {'message': {'page': "'Flask' object has no attribute 'redis_cluster'"}}
+[2020-07-24 15:44:11,755] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=8ECBD1870AB6A322A80104D9680C1DBD; vue_typescript_admin_access_token=5f1a335e1ae7fd572fb51211; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU1ODA0NjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.OnlLllflF3MbF6CVe-dfWz0xvjBS8TsmBcqBee1RAVc
+
+
+[2020-07-24 15:44:11,755] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 10: b''
+[2020-07-24 15:44:11,756] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
+WARNING in output 11: {'message': {'page': "'Flask' object has no attribute 'redis_cluster'"}}

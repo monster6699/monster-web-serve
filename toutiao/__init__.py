@@ -110,5 +110,9 @@ def create_app(config, enable_config_file=False):
     from .resources.search import search_bp
     app.register_blueprint(search_bp)
 
+    # 管理员
+    from .resources.admin import admin_bp
+    app.register_blueprint(admin_bp)
+
     return app
 

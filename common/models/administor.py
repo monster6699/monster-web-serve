@@ -21,6 +21,7 @@ class Administrator(db.Model):
     name = db.Column(db.String, doc='管理员名称')
     email = db.Column(db.String, doc='电子邮箱')
     mobile = db.Column(db.String, doc='手机号')
+    remark = db.Column(db.String, doc='备注')
     status = db.Column(db.Integer, default=1, doc='状态')
     ctime = db.Column('create_time', db.DateTime, default=datetime.now, doc='创建时间')
     utime = db.Column('update_time', db.DateTime, default=datetime.now, onupdate=datetime.now, doc='更新时间')
