@@ -26,11 +26,6 @@ class Administrator(db.Model):
     ctime = db.Column('create_time', db.DateTime, default=datetime.now, doc='创建时间')
     utime = db.Column('update_time', db.DateTime, default=datetime.now, onupdate=datetime.now, doc='更新时间')
 
-    # 设置访问密码的方法,并用装饰器@property设置为属性,调用时不用加括号
-    # @property
-    # def password(self):
-    #     return self.password
-
     # 设置加密的方法,传入密码,对类属性进行操作
     # @password.setter
     # def password(self, value):
