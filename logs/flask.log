@@ -385,3 +385,45 @@ Cookie: JSESSIONID=8ECBD1870AB6A322A80104D9680C1DBD; vue_typescript_admin_access
 WARNING in output 10: b''
 [2020-07-24 15:44:11,756] 127.0.0.1 requested http://localhost:5000/admin/user/list?page=1&per_page=20&sort=name|asc
 WARNING in output 11: {'message': {'page': "'Flask' object has no attribute 'redis_cluster'"}}
+[2020-07-29 13:47:10,375] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 0
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwMDc4NzQsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.r1G6SygevfXemtwtUTZh58FVUGCmuUBOQIuG4TTFkg4
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=0DC2FD210FC39E7E22D75407BA46CCF1; vue_typescript_admin_access_token=5f20eda78c29c400c22f6905; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwMDc4NzQsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.r1G6SygevfXemtwtUTZh58FVUGCmuUBOQIuG4TTFkg4; sidebarStatus=0
+
+
+[2020-07-29 13:47:10,385] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 10: b''
+[2020-07-29 13:47:10,385] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 11: {'message': {'id': 'Missing required parameter in the JSON body'}}
+[2020-07-29 13:48:26,512] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 0
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwMDc4NzQsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.r1G6SygevfXemtwtUTZh58FVUGCmuUBOQIuG4TTFkg4
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=0DC2FD210FC39E7E22D75407BA46CCF1; vue_typescript_admin_access_token=5f20eda78c29c400c22f6905; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwMDc4NzQsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.r1G6SygevfXemtwtUTZh58FVUGCmuUBOQIuG4TTFkg4; sidebarStatus=0
+
+
+[2020-07-29 13:48:26,514] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 10: b''
+[2020-07-29 13:48:26,514] 127.0.0.1 requested http://localhost:5000/user/logout
+WARNING in output 11: {'message': {'id': 'Missing required parameter in the JSON body'}}

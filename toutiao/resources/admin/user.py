@@ -1,4 +1,5 @@
 import json
+import random
 
 from flask_restful import Resource
 from flask_restful.reqparse import RequestParser
@@ -12,8 +13,6 @@ from utils import parser
 from models import db
 from models.administor import Administrator, AdministratorRoleMenu, AdministratorMenu, AdministratorRole, \
     AdministratorUserRole
-from models.news import Attitude, ArticleStatistic, CommentLiking, Comment
-from cache import statistic as cache_statistic
 
 
 class AdminUserListResource(Resource):
@@ -261,3 +260,40 @@ class AdminGetRoleInfoResource(Resource):
             }
             data.append(result)
         return data
+
+
+class AdminRestPasswordResource(Resource):
+    """
+    重置密码
+    """
+    method_decorators = [set_db_to_read, login_required]
+
+    def post(self):
+        json_parser = RequestParser()
+        json_parser.add_argument('id', type=str, required=True, location='json')
+        args = json_parser.parse_args()
+        user = Administrator.query.filter_by(id=args.id).first()
+        new_password = self._generate_code()
+        user.password = new_password
+        db.session.add(user)
+        db.session.commit()
+        return {"password": new_password}
+
+    @staticmethod
+    def _generate_code(code_len=6):
+        all_char = '0123456789qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJIKOLP'
+        index = len(all_char) + 1
+        code = ''
+        for _ in range(code_len):
+            num = random.randint(0, index)
+            code += all_char[num]
+        return code
+
+
+class AdminLogOutResource(Resource):
+    """
+    退出登录, 目前清除token无法实现
+    """
+    def post(self):
+        return "ok"
+

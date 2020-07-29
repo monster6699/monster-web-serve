@@ -17,7 +17,7 @@ class Administrator(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, doc='管理员ID')
     username = db.Column(db.String, doc='账号')
-    password = db.Column(db.String, doc='密码')
+    hash_password = db.Column('password', db.String, doc='密码')
     name = db.Column(db.String, doc='管理员名称')
     email = db.Column(db.String, doc='电子邮箱')
     mobile = db.Column(db.String, doc='手机号')
@@ -26,14 +26,17 @@ class Administrator(db.Model):
     ctime = db.Column('create_time', db.DateTime, default=datetime.now, doc='创建时间')
     utime = db.Column('update_time', db.DateTime, default=datetime.now, onupdate=datetime.now, doc='更新时间')
 
+    @property
+    def password(self):
+        raise AttributeError('password is not a readable attribute/ password 不是一个可读属性。')
     # 设置加密的方法,传入密码,对类属性进行操作
-    # @password.setter
-    # def password(self, value):
-    #     self.password = generate_password_hash(value)
+    @password.setter
+    def password(self, value):
+        self.hash_password = generate_password_hash(value)
 
     # 设置验证密码的方法
     def check_password(self, user_pwd):
-        return check_password_hash(self.password, user_pwd)
+        return check_password_hash(self.hash_password, user_pwd)
 
 
 class AdministratorRole(db.Model):

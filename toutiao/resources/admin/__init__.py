@@ -26,3 +26,9 @@ admin_api.add_resource(user.AdminGetRoleInfoResource, '/admin/user/role/<int(min
 
 admin_api.add_resource(user.AdminRoleUpdateResource, '/admin/user/role',
                        endpoint='AdminRoleUpdateResource')
+
+admin_api.add_resource(user.AdminRestPasswordResource, '/admin/user/password/reset',
+                       endpoint='AdminRestPasswordResource')
+
+admin_api.add_resource(user.AdminLogOutResource, '/user/logout',
+                       endpoint='AdminLogOutResource')
