@@ -49,12 +49,13 @@ class CurrentUserMenu(Resource):
         """
         获取当前用户自己的菜单数据
         """
-        role_id = AdministratorUserRole.query.filter_by(user_id=g.user_id).first()
-        user_menu = AdministratorRoleMenu.query.filter(role_id == role_id).all()
+        role = AdministratorUserRole.query.filter_by(user_id=g.user_id, status=1).first()
+        user_menu = AdministratorRoleMenu.query.filter_by(role_id=role.role_id, status=1).all()
         menu_list = []
         for menu in user_menu:
             menu_list.append(menu.menu_id)
-        role_menu = AdministratorMenu.query.filter(AdministratorMenu.id.in_(menu_list), ).all()
+        role_menu = AdministratorMenu.query.filter(AdministratorMenu.id.in_(menu_list),
+                                                   AdministratorMenu.status == 1).all()
         resualt = []
         for menu in role_menu:
             menu_dict = {

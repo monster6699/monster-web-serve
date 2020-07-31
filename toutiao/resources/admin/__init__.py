@@ -32,3 +32,27 @@ admin_api.add_resource(user.AdminRestPasswordResource, '/admin/user/password/res
 
 admin_api.add_resource(user.AdminLogOutResource, '/user/logout',
                        endpoint='AdminLogOutResource')
+
+admin_api.add_resource(user.AdminGetParentMenuResource, '/admin/menu/parentMenuList',
+                       endpoint='AdminGetParentMenuResource')
+
+admin_api.add_resource(user.AdminCreateMenuResourece, '/admin/menu/create',
+                       endpoint='AdminCreateMenuResourece')
+
+admin_api.add_resource(user.AdminGetSingleMenuResource, '/admin/menu/info',
+                       endpoint='AdminGetSingleMenuResource')
+
+admin_api.add_resource(user.AdmminUpdateMenyResource, '/admin/menu/update',
+                       endpoint='AdmminUpdateMenyResource')
+
+admin_api.add_resource(user.AdmminGetSingleRoleResource, '/admin/role/info',
+                       endpoint='AdmminGetSingleRoleResource')
+
+admin_api.add_resource(user.AdmminUpdateSingleRoleResource, '/admin/role/update',
+                       endpoint='AdmminUpdateSingleRoleResource')
+
+admin_api.add_resource(user.AdminGetMenuInfoResource, '/admin/role/menu',
+                       endpoint='AdminGetMenuInfoResource')
+
+admin_api.add_resource(user.AdminUpdateRoleMenuInfoResource, '/admin/role/menu',
+                       endpoint='AdminUpdateRoleMenuInfoResource')

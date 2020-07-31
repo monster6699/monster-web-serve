@@ -427,3 +427,175 @@ Cookie: JSESSIONID=0DC2FD210FC39E7E22D75407BA46CCF1; vue_typescript_admin_access
 WARNING in output 10: b''
 [2020-07-29 13:48:26,514] 127.0.0.1 requested http://localhost:5000/user/logout
 WARNING in output 11: {'message': {'id': 'Missing required parameter in the JSON body'}}
+[2020-07-30 10:59:00,945] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 188
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=056268708596D835FE77123785DBD7B5; vue_typescript_admin_access_token=5f221f705ec03923b76c6f9c; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+
+
+[2020-07-30 10:59:00,953] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 10: b'{"name":"/test","path":"/test","fullPath":"/test","redirect":"","meta":{"title":"/test","icon":"/test","affix":false},"remark":"","phone":"","email":"","status":1,"parentId":0,"order":"0"}'
+[2020-07-30 10:59:00,954] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 11: {'message': {'id': 'Missing required parameter in the JSON body'}}
+[2020-07-30 11:00:07,209] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 193
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=056268708596D835FE77123785DBD7B5; vue_typescript_admin_access_token=5f221f705ec03923b76c6f9c; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+
+
+[2020-07-30 11:00:07,210] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 10: b'{"name":"/test","path":"/test","fullPath":"/test","redirect":"/test","meta":{"title":"/test","icon":"/test","affix":false},"remark":"","phone":"","email":"","status":1,"parentId":0,"order":"0"}'
+[2020-07-30 11:00:07,210] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 11: {'message': {'id': 'Missing required parameter in the JSON body'}}
+[2020-07-30 11:10:58,844] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 193
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=056268708596D835FE77123785DBD7B5; vue_typescript_admin_access_token=5f221f705ec03923b76c6f9c; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYwNzk5MzUsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.BFFqRyLU0vIYFwG9_VGVY_Ou21YQ0l5Qdjx6PTSxJ2c
+
+
+[2020-07-30 11:10:58,844] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 10: b'{"name":"/test","path":"/test","fullPath":"/test","redirect":"/test","meta":{"title":"/test","icon":"/test","affix":false},"remark":"","phone":"","email":"","status":1,"parentId":0,"order":"0"}'
+[2020-07-30 11:10:58,844] 127.0.0.1 requested http://localhost:5000/admin/menu/create
+WARNING in output 11: {'message': {'data': 'Missing required parameter in the JSON body or the post body or the query string'}}
+[2020-07-30 17:31:58,447] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxMDUxNjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.pG7bB89adkh7R9WsDtfyPsj0eU-nCbyPwwxUeS6Wa2s
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=056268708596D835FE77123785DBD7B5; vue_typescript_admin_access_token=5f221f705ec03923b76c6f9c; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxMDUxNjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.pG7bB89adkh7R9WsDtfyPsj0eU-nCbyPwwxUeS6Wa2s; sidebarStatus=1
+
+
+[2020-07-30 17:31:58,456] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 10: b''
+[2020-07-30 17:31:58,456] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 11: {'message': {'menuId': 'Missing required parameter in params'}}
+[2020-07-30 17:32:57,697] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxMDUxNjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.pG7bB89adkh7R9WsDtfyPsj0eU-nCbyPwwxUeS6Wa2s
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=056268708596D835FE77123785DBD7B5; vue_typescript_admin_access_token=5f221f705ec03923b76c6f9c; sidebar_status=opened; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxMDUxNjYsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.pG7bB89adkh7R9WsDtfyPsj0eU-nCbyPwwxUeS6Wa2s; sidebarStatus=0
+
+
+[2020-07-30 17:32:57,699] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 10: b''
+[2020-07-30 17:32:57,699] 127.0.0.1 requested http://localhost:5000/admin/menu/info?menuId=1
+WARNING in output 11: {'message': {'menuId': 'Missing required parameter in param'}}
+[2020-07-31 10:12:31,115] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 210
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs
+
+
+[2020-07-31 10:12:31,124] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 10: b'{"id":1,"name":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae","path":"/settings","fullPath":"/settings","order":"0","remark":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae","redirect":"/settings/personalSettings","meta":{"icon":"dashboard","title":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae"},"status":1}'
+[2020-07-31 10:12:31,125] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 11: {'message': {'parentId': 'Missing required parameter in the JSON body'}}
+[2020-07-31 10:13:06,489] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 210
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs
+
+
+[2020-07-31 10:13:06,490] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 10: b'{"id":1,"name":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae","path":"/settings","fullPath":"/settings","order":"0","remark":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae","redirect":"/settings/personalSettings","meta":{"icon":"dashboard","title":"\xe7\xb3\xbb\xe7\xbb\x9f\xe8\xae\xbe\xe7\xbd\xae"},"status":1}'
+[2020-07-31 10:13:06,490] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 11: {'message': {'parentId': 'Missing required parameter in the JSON body'}}
+[2020-07-31 10:16:22,425] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 223
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzAsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.MfkKcpuw2lZATng6m5B1uXcGidq1hPrj2aXh0Pg1MJs; sidebarStatus=0
+
+
+[2020-07-31 10:16:22,426] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 10: b'{"id":2,"name":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae","path":"personalSettings","fullPath":"/settings/personalSettings","order":"0","remark":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae","redirect":null,"meta":{"icon":"dashboard","affix":true,"title":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae"},"status":1}'
+[2020-07-31 10:16:22,426] 127.0.0.1 requested http://localhost:5000/admin/menu/update
+WARNING in output 11: {'message': {'parentId': 'Missing required parameter in the JSON body'}}
