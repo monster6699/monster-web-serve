@@ -599,3 +599,201 @@ Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTYxNjg2NzA
 WARNING in output 10: b'{"id":2,"name":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae","path":"personalSettings","fullPath":"/settings/personalSettings","order":"0","remark":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae","redirect":null,"meta":{"icon":"dashboard","affix":true,"title":"\xe4\xb8\xaa\xe4\xba\xba\xe8\xae\xbe\xe7\xbd\xae"},"status":1}'
 [2020-07-31 10:16:22,426] 127.0.0.1 requested http://localhost:5000/admin/menu/update
 WARNING in output 11: {'message': {'parentId': 'Missing required parameter in the JSON body'}}
+[2020-08-06 10:24:04,837] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 35269
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:24:04,852] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:24:04,852] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'data': 'Missing required parameter in file'}}
+[2020-08-06 10:42:57,945] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 29837
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:42:57,946] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:42:57,946] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in an uploaded file'}}
+[2020-08-06 10:43:32,306] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 29837
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:43:32,309] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:43:32,309] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in an uploaded file'}}
+[2020-08-06 10:45:59,914] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 19684
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:45:59,916] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:45:59,916] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in the JSON body or the post body or the query string'}}
+[2020-08-06 10:49:05,354] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 40624
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarycipJCOVlqvaH9gRj
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:49:05,356] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:49:05,356] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 40624
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryiSFVAXgBT8IvhrRy
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:49:05,357] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in the JSON body or the post body or the query string'}}
+[2020-08-06 10:49:05,358] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:49:05,360] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in the JSON body or the post body or the query string'}}
+[2020-08-06 10:49:24,326] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 40624
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryez5XixfIaZ4MkHRl
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY2ODA3NzcsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.o3ndTpKX6ICtjvvf99d-_9mH_hpJQeaft58GtuJ7flA; sidebarStatus=0
+
+
+[2020-08-06 10:49:24,328] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-06 10:49:24,328] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in the JSON body or the post body or the query string'}}
+[2020-08-07 09:50:34,323] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 68613
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY3NzIyMjEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.G4FsDlE7SLk4tBasR8GhXiFCotn2tdE4WLO5eyU1wdE
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryO6cwXFtNgfBrleSS
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY3NzIyMjEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.G4FsDlE7SLk4tBasR8GhXiFCotn2tdE4WLO5eyU1wdE
+
+
+[2020-08-07 09:50:34,333] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-07 09:50:34,333] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in an uploaded file'}}
+[2020-08-07 09:51:41,018] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 137182
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY3NzIyMjEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.G4FsDlE7SLk4tBasR8GhXiFCotn2tdE4WLO5eyU1wdE
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAmA8lZjAU4tCufgg
+Origin: http://localhost:9527
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9527/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY3NzIyMjEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.G4FsDlE7SLk4tBasR8GhXiFCotn2tdE4WLO5eyU1wdE
+
+
+[2020-08-07 09:51:41,019] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 10: b''
+[2020-08-07 09:51:41,019] 127.0.0.1 requested http://localhost:5000/upload/images
+WARNING in output 11: {'message': {'files': 'Missing required parameter in an uploaded file'}}

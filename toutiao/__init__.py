@@ -114,5 +114,8 @@ def create_app(config, enable_config_file=False):
     from .resources.admin import admin_bp
     app.register_blueprint(admin_bp)
 
+    from .resources.upload import upload_bp
+    app.register_blueprint(upload_bp)
+
     return app
 
