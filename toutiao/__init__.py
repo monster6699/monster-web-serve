@@ -117,5 +117,8 @@ def create_app(config, enable_config_file=False):
     from .resources.upload import upload_bp
     app.register_blueprint(upload_bp)
 
+    from .resources.article import actilce_bp
+    app.register_blueprint(actilce_bp)
+
     return app
 

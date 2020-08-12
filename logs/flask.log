@@ -797,3 +797,47 @@ Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTY3NzIyMjE
 WARNING in output 10: b''
 [2020-08-07 09:51:41,019] 127.0.0.1 requested http://localhost:5000/upload/images
 WARNING in output 11: {'message': {'files': 'Missing required parameter in an uploaded file'}}
+[2020-08-10 16:25:27,459] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 106
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTcwNTI1NzEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.bIr04EeCj7hv502n1fz4rgR0krkHM1c8o5Hxgoj8i4o
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTcwNTI1NzEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.bIr04EeCj7hv502n1fz4rgR0krkHM1c8o5Hxgoj8i4o; sidebarStatus=0
+
+
+[2020-08-10 16:25:27,461] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 10: b'{"title":"","imageFiles":"","content":"<p data-source=\\"1\\">\xe8\xbf\x99\xe9\x87\x8c\xe6\x94\xbemarkdown\xe5\x86\x85\xe5\xae\xb9</p>\\n","categories":3}'
+[2020-08-10 16:25:27,461] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 11: {'message': {'categories ': 'Missing required parameter in the JSON body'}}
+[2020-08-10 16:39:38,492] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 9: Host: localhost:5000
+Connection: keep-alive
+Content-Length: 110
+Accept: application/json, text/plain, */*
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTcwNTI1NzEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.bIr04EeCj7hv502n1fz4rgR0krkHM1c8o5Hxgoj8i4o
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Content-Type: application/json;charset=UTF-8
+Origin: http://localhost:9528
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:9528/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTcwNTI1NzEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlfQ.bIr04EeCj7hv502n1fz4rgR0krkHM1c8o5Hxgoj8i4o; sidebarStatus=0
+
+
+[2020-08-10 16:39:38,493] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 10: b'{"title":"3333","imageFiles":"","content":"<p data-source=\\"1\\">\xe8\xbf\x99\xe9\x87\x8c\xe6\x94\xbemarkdown\xe5\x86\x85\xe5\xae\xb9</p>\\n","categories":3}'
+[2020-08-10 16:39:38,493] 127.0.0.1 requested http://localhost:5000/article/create
+WARNING in output 11: {'message': {'categories ': 'Missing required parameter in the JSON body'}}
