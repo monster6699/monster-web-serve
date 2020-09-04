@@ -54,7 +54,6 @@ def create_app(config, enable_config_file=False):
     # # 添加请求钩子
     from utils.middlewares import jwt_authentication
     app.before_request(jwt_authentication)
-
     # from redis.sentinel import Sentinel
     # _sentinel = Sentinel(app.config['REDIS_SENTINELS'])
     # app.redis_master = _sentinel.master_for(app.config['REDIS_SENTINEL_SERVICE_NAME'])

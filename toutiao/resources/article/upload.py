@@ -23,15 +23,11 @@ class ArticleCreateResourece(Resource):
         json_parser = RequestParser()
         json_parser.add_argument('categories', type=int, required=True, location='json')
         json_parser.add_argument('content', type=str, required=True, location='json')
-        json_parser.add_argument('imageFiles', type=str, required=True, location='json')
         json_parser.add_argument('title', type=str, required=True, location='json')
 
         args = json_parser.parse_args()
         try:
-            cover = Cover(title=args.title, image=args.imageFiles)
-            db.session.add(cover)
-            db.session.commit()
-            content = Content(content=args.content, category_id=args.categories, cover_id=cover.id)
+            content = Content(title=args.title, content=args.content, category_id=args.categories)
             db.session.add(content)
             db.session.commit()
         except Exception as e:
